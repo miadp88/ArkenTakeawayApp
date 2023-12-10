@@ -1,23 +1,38 @@
-
-
 <template>
-  <fwb-card
-    img-alt="Desk"
-    img-src="https://flowbite.com/docs/images/blog/image-1.jpg"
-    variant="image"
-  >
-    <div class="p-5">
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Noteworthy technology acquisitions 2021
-      </h5>
-      <p class="font-normal text-gray-700 dark:text-gray-400">
-        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-      </p>
+  <header>htdrhkbstlodhruhp</header>
+  <main>
+  
+  </main>
+  <fwb-footer footer-type="socialmedia" class=".fixed .bottom-0">
+  
+    <div class="sm:flex sm:items-center sm:justify-between">
+     
+      <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0 w-full">
+        <fwb-footer-icon href="/">
+          <svg aria-hidden="true" class="w-10 h-10 text-black dark:text-gray-500 hover:text-gray-500 dark:hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd" />
+          </svg>
+        </fwb-footer-icon>
+        <fwb-footer-icon href="/">
+          <svg aria-hidden="true" class="w-10 h-10 text-black dark:text-gray-500 hover:text-gray-500 dark:hover:text-white" fill="currentColor" viewBox="0 0 21 16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+          </svg>
+        </fwb-footer-icon>
+        <fwb-footer-icon href="/">
+          <svg aria-hidden="true" class="w-10 h-10 text-black dark:text-gray-500 hover:text-gray-500 dark:hover:text-white" fill="currentColor" viewBox="0 0 20 17" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" fill-rule="evenodd" />
+          </svg>
+        </fwb-footer-icon>
+      </div>
     </div>
-  </fwb-card>
+  </fwb-footer>
 </template>
 
 <script setup>
-import { FwbCard } from 'flowbite-vue'
+import {
+  FwbFooter,
+  FwbFooterCopyright,
+  FwbFooterLink,
+  FwbFooterLinkGroup,
+} from 'flowbite-vue'
 </script>
-
