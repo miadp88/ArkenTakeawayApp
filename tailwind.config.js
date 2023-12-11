@@ -8,5 +8,10 @@ module.exports = {
   plugins: [
       require('flowbite/plugin')
   ],
-  theme: {}
+  theme: {
+    colors:{
+      footerColor: 'rgba(247, 247, 247, 0.84)',
+      welcomebtnbackground: 'rgba(247, 247, 247, 0.15)'
+    }
+  }
 }
