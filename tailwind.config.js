@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     colors:{
       footerColor: 'rgba(247, 247, 247, 0.84)',
-      welcomebtnbackground: 'rgba(247, 247, 247, 0.15)'
+      welcomebtnbackground: 'rgba(112, 112, 112, 0.65)'
     }
   }
 }

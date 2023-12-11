@@ -39,9 +39,10 @@ import MainContent from '@/components/Layout/MainContent.vue'
 
     .SpacerHandler{
       height: 80vh;
-      background-image: url('../src/assets/images/AdobeStock_636846897_Preview.jpeg');
+      background-image: url('/src/assets/images/BottumBagrund.jpeg');
       background-repeat: no-repeat;
       background-position: bottom center;
+      background-size: 60vw 40vh;
     }
   
  
