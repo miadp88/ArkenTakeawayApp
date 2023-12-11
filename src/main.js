@@ -15,43 +15,7 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
-/*const router = createRouter({
-    history: createWebHashHistory(),
-    routes: [
-      {
-        path: '/',
-        name: 'welcome',
-        component: WelcomeView
-      },
-      {
-        path: '/menuView',
-        name: 'menu',
-        component: MenuView
-      },
-      {
-        path: '/menuAddView',
-        name: 'menuAdd',
-        component: MenuAddView
-      },
-      {
-        path: '/userInfoView',
-        name: 'userInfo',
-        component: UserInfoView
-      },
-      {
-        path: '/doneOrderView',
-        name: 'doneOrder',
-        component: DoneOrderView
-      },
-      {
-        path: '/StatsView',
-        name: 'stats',
-        component: StatsView
-      }
-  
-  
-    ]
-  })*/
+
 
 createApp(App)
 .use(createPinia())

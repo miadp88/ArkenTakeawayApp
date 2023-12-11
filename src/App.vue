@@ -4,6 +4,7 @@
   </header>
 
   <main>
+    <MainContent />
   </main>
 
   <footer>
@@ -58,9 +59,15 @@
 /*imports*/
 
 import NavBar from '@/components/Layout/NavBar.vue'
+import Footer from '@/components/Layout/Footer.vue'
+import MainContent from '@/components/Layout/MainContent.vue'
 </script>
 
 <style>
   @import '../node_modules/bulma/css/bulma-rtl.min.css';
+  main{
+    width: 70vw;
+    margin: auto;
+  }
  
 </style>
