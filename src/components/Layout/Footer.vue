@@ -1,5 +1,5 @@
 <template>
-    <footer class="my-8 bg-footerColor dark:bg-gray-900">
+    <footer class=" footerWelcome my-8 bg-footerColor dark:bg-gray-900">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="sm:flex sm:items-center sm:justify-between">
                 <div class="flex mt-4 sm:justify-center sm:mt-0 w-full">
@@ -38,3 +38,10 @@
         </div>
     </footer>
 </template>
+
+<style>
+
+.footerWelcome{
+      margin-top: -18.4vh;
+    }
+</style>

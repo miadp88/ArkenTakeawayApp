@@ -3,6 +3,8 @@ import WelcomeView from '../Views/WelcomeView.vue'
 import MenuView from '../Views/MenuView.vue'
 import MenuAddView from '../Views/MenuAddView.vue'
 import UserInfoView from '../Views/UserInfoView.vue'
+import HeroAll from '../components/Layout/HeroAll.vue'
+
 
 const routes = [
   {
@@ -34,7 +36,13 @@ const routes = [
     path: '/StatsView',
     name: 'stats',
     component: StatsView
-  }
+  },
+  {
+  path: '/src/components/Layout/HeroAll.vue',
+  name: 'heroAll',
+  component: HeroAll
+}
+
   
 ]
 import DoneOrderView from '../Views/DoneOrderView.vue'

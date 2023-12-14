@@ -1,5 +1,5 @@
 <template>
-  <section class="hero bg-black dark:bg-gray-900 w-full">
+  <section class="hero hero_0 bg-black dark:bg-gray-900 w-full">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
        
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white tracking-wider">Restaurant Arken</h1>
@@ -14,8 +14,8 @@
         <div class="flex flex-row justify-center my-12 w-full">
 
           <div>
-            <a a href="#" class="mx-2 text-white Welcomebtn justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                Link  Side Link  Side</a>
+            <RouterLink  to="/menuView" class="mx-2 text-white Welcomebtn justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                sæson </RouterLink>
           </div>
           <div>
             <a href="#" class="mx-2 text-white Welcomebtn  justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
@@ -53,10 +53,10 @@
   }
 
   .hero{
-    background-image: url('/src/assets/images/TopBaground.jpeg');
+    background-image: url('/src/assets/images/TopBagrundGradient.png');
     background-repeat: no-repeat;
       background-position: top center;
-      background-size: cover;
+      background-size:cover;
       h1{
         font-family: "cooper-black-std", serif;
         font-weight: 400;
@@ -76,5 +76,10 @@
     height: 20px;
     margin-top: 20px;
   }
+
+
+
+
+
 
 </style>

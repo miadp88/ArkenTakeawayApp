@@ -1,29 +1,10 @@
 <template>
-  <header>
-    <NavBar />
-  </header>
-
-  <main>
-    <MainContent />
-    <section class="SpacerHandler"></section>
-  </main>
-
-  <footer>
-    <Footer />
-  </footer>
-
-    
   <router-view />
+  <a href="" class="scroll-down-link scroll-down-arrow" data-iconfont="ETmodules" data-icon>
+</a>
 </template>
 
-<script setup>
 
-/*imports*/
-
-import NavBar from '@/components/Layout/NavBar.vue'
-import Footer from '@/components/Layout/Footer.vue'
-import MainContent from '@/components/Layout/MainContent.vue'
-</script>
 
 <style>
   @import '../node_modules/bulma/css/bulma-rtl.min.css';
@@ -33,9 +14,7 @@ import MainContent from '@/components/Layout/MainContent.vue'
       width: 70vw;
       margin: auto;
     }
-    footer{
-      margin-top: -10vh;
-    }
+   
 
     .SpacerHandler{
       height: 80vh;
@@ -45,5 +24,46 @@ import MainContent from '@/components/Layout/MainContent.vue'
       background-size: 60vw 40vh;
     }
   
+    .scroll-down-arrow {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2hldnJvbl90aGluX2Rvd24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiBmaWxsPSJ3aGl0ZSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE3LjQxOCw2LjEwOWMwLjI3Mi0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwYzAuMjcsMC4yNjgsMC4yNzEsMC43MDEsMCwwLjk2OWwtNy45MDgsNy44M2MtMC4yNywwLjI2OC0wLjcwNywwLjI2OC0wLjk3OSwwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEsMC0wLjk2OWMwLjI3MS0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwTDEwLDEzLjI1TDE3LjQxOCw2LjEwOXoiLz48L3N2Zz4=);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.scroll-down-link {
+  position: absolute;
+  z-index: 100;
+  cursor:pointer;
+  height: 60px;
+  width: 80px;
+  margin: 0px 0 0 -40px;
+  line-height: 60px;
+  left: 50%;
+  bottom: 10px;
+  color: #FFF;
+  text-align: center;
+  font-size: 70px;
+  text-decoration: none;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+  -webkit-animation: fade_move_down 2s ease-in-out infinite;
+  -moz-animation:    fade_move_down 2s ease-in-out infinite;
+  animation:         fade_move_down 2s ease-in-out infinite;
+  /*animated scroll arrow animation*/
+  @-webkit-keyframes fade_move_down {
+    0%   { -webkit-transform:translate(0,-20px); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -webkit-transform:translate(0,20px); opacity: 0; }
+  }
+  @-moz-keyframes fade_move_down {
+    0%   { -moz-transform:translate(0,-20px); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -moz-transform:translate(0,20px); opacity: 0; }
+  }
+  @keyframes fade_move_down {
+    0%   { transform:translate(0,-20px); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { transform:translate(0,20px); opacity: 0; }
+  }
+}
  
 </style>
