@@ -13,6 +13,7 @@
     main{
       width: 70vw;
       margin: auto;
+      margin-top: -10vh;
     }
    
 

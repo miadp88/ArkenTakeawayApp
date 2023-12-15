@@ -1,6 +1,7 @@
 <template>
      <header>
-    <NavBar />
+      <NavBarOrder />
+    
   </header>
 
     <main>
@@ -19,6 +20,6 @@
 
 <script setup>
 import HeroAll from "@/components/Layout/HeroAll.vue"
-import NavBar from '@/components/Layout/NavBar.vue'
+import NavBarOrder from '@/components/Layout/NavBarOrder.vue'
 import Card from '@/components/Layout/Card.vue'
 </script>
