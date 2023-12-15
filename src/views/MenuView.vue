@@ -13,6 +13,7 @@
             <Card />
           </div>
        </section>
+       
     </main>
 
     <router-view />
@@ -20,6 +21,6 @@
 
 <script setup>
 import HeroAll from "@/components/Layout/HeroAll.vue"
-import NavBarOrder from '@/components/Layout/NavBarOrder.vue'
 import Card from '@/components/Layout/Card.vue'
+import NavBarOrder from '@/components/Layout/NavBarOrder.vue'
 </script>

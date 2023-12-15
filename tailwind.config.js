@@ -15,6 +15,7 @@ module.exports = {
       btnBlue: 'rgba(122, 228, 245)',
       btnBlueHover: 'rgba(122, 228, 245, 0.65)',
       NavColor: 'rgba(0, 0, 0, 0.75)',
+      Formbackground: 'rgba(112, 112, 112, 0.25)',
 
     }
   }

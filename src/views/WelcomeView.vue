@@ -6,6 +6,8 @@
   <main>
     <HeroWelcome />
     <section class="SpacerHandler"></section>
+    <a href="" class="scroll-down-link scroll-down-arrow" data-iconfont="ETmodules" data-icon>
+</a>
   </main>
 
   <footer>
