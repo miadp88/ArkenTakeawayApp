@@ -8,52 +8,30 @@
         </div>
     </div>
         
+  
+        <div class="bg-welcomebtnbackground py-10 text-center flex flex-col items-center mx-auto w-full">
+            
+            <fwb-button-group class="text-center items-center mx-auto mb-8 ">
+              <fwb-button outline class="welcomeBtn">Sæson</fwb-button>
+              <fwb-button outline class="welcomeBtn">Menu</fwb-button>
+            
+          </fwb-button-group>
 
-    <div class="bg-welcomebtnbackground py-10 text-center flex flex-col">
-        
+          <fwb-button-group>
+            
+              <fwb-button outline class="welcomeBtn">Bordbestilling</fwb-button>
+              <fwb-button outline class="welcomeBtn">Kontakt</fwb-button>
+          </fwb-button-group>
 
-        <div class="flex flex-col sm:flex-row justify-center w-full h-20">
-
-          <div>
-            <RouterLink to="/menuView" class="mx-2 text-white Welcomebtn justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-              sæson
-            </RouterLink>
-          </div>
-          <div>
-            <a href="#" class="mx-2 text-white Welcomebtn justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-              Link Side Link Side
-            </a> 
-          </div>
-
-        </div>
-
-
-        <div class="flex flex-col sm:flex-row justify-center w-full">
-          <div>
-            <a href="#" class="mx-2 text-white Welcomebtn justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-              Link Side Link Side
-            </a> 
-          </div>
-          <div>
-            <a href="#" class="mx-2 text-white Welcomebtn justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-              Link Side Link Side
-            </a> 
-          </div>
-        </div>   
-          
-           
-    </div>
-    <div class="heroSpacer py-8">
+            
+            </div>
+   
+  <div class="heroSpacer py-8">
 
     </div>
   </section>
 </template>
 <style>
-  .Welcomebtn{
-    border-radius: 25px;
-    border-width: 3px;
-  }
-
   .hero{
     background-image: url('/src/assets/images/TopBagrundGradient.png');
     background-repeat: no-repeat;
@@ -74,14 +52,24 @@
     background-color: black;
   }
 
+  .welcomeBtn{
+    border: solid 3px white;
+    color: white;
+    width: 13em;
+    border-radius: 22em;
+    margin-left: 2vw;
+    font-size: x-large;
+    height: 2em;
+    letter-spacing: 5px;
+  }
+
   .heroSpacer{
     height: 20px;
     margin-top: 20px;
   }
 
-
-
-
-
-
 </style>
+
+<script setup>
+import { FwbButtonGroup, FwbButton,  } from 'flowbite-vue'
+</script>
