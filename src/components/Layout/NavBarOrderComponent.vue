@@ -1,10 +1,13 @@
 <!-- src/components/Layout/NavBarOrderComponent.vue -->
 <template>
   <nav class="flex items-center justify-between p-6 bg-NavColor">
-    <!-- ... (existing code) ... -->
+    <!-- Logo -->
+    <router-link to="/">
+      <img class="h-8" src="../../assets/images/13694_logo.jpg" alt="Logo" />
+    </router-link>
 
     <!-- Cart Icon with Counter -->
-    <div class="relative">
+    <div class="relative" @click="showCart">
       <!-- Cart SVG Icon -->
       <svg
         class="w-8 h-8 cursor-pointer"
@@ -12,7 +15,6 @@
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        @click="showCart"
       >
         <path
           stroke-linecap="round"
@@ -37,16 +39,18 @@ import { ref, computed } from 'vue';
 import { useCartStore } from '@/stores/index';
 
 export default {
-  // ... (existing code) ...
-
   setup() {
-    const cartCount = computed(() => useCartStore().clickCount);
+    // Existing code ...
 
-    // ... (existing setup code) ...
+    const cartCount = computed(() => useCartStore().getMenuCount());
+
+    // Existing code ...
 
     return {
+      // Existing return values ...
       cartCount,
     };
   },
 };
 </script>
+
