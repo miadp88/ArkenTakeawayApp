@@ -1,4 +1,3 @@
-// src/store/index.js
 import { defineStore } from 'pinia';
 
 export const useCartStore = defineStore('cart', {
