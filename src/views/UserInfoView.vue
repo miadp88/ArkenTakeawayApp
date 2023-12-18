@@ -11,9 +11,9 @@
 </template>
 
 <script setup>
-    import InfoForm from '@/components/Layout/InforForm.vue'
-    import HeroAll from "@/components/Layout/HeroAll.vue"
-    import NavBarOrder from '@/components/Layout/NavBarOrder.vue'
+    import InfoForm from '@/components/Layout/InfoFormComponent.vue'
+    import HeroAll from "@/components/Layout/HeroAllComponent.vue"
+    import NavBarOrder from '@/components/Layout/NavBarOrderComponent.vue'
 </script>
 
 <style>

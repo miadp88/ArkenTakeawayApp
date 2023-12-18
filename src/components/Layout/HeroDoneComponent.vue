@@ -7,28 +7,10 @@
         <div class="lex mb-1 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">  
         </div>
     </div>
-        
-  
-        <div class="bg-welcomebtnbackground py-10 text-center flex flex-col items-center mx-auto w-full">
-            
-            <fwb-button-group class="text-center items-center mx-auto mb-8 ">
-              <fwb-button outline class="welcomeBtn">Sæson</fwb-button>
-              <fwb-button outline class="welcomeBtn">Menu</fwb-button>
-            
-          </fwb-button-group>
-
-          <fwb-button-group>
-            
-              <fwb-button outline class="welcomeBtn">Bordbestilling</fwb-button>
-              <fwb-button outline class="welcomeBtn">Kontakt</fwb-button>
-          </fwb-button-group>
-
-            
-            </div>
-   
-  <div class="heroSpacer py-8">
-
-    </div>
+        <div class=" DoneField absolute bg-welcomebtnbackground py-10 text-center flex flex-col items-center mx-auto w-full h-1/2">
+          <h1 class="text-white">Tak!</h1> 
+          <h2 class="text-white DoneText">Vi har modtaget din odre Hold øje med din mail indbakke, du modtager snarest en ordre bekræftelse</h2>   
+        </div>
   </section>
 </template>
 <style>
@@ -42,6 +24,17 @@
         font-weight: 400;
         font-style: normal;
         font-size: 6em;
+        text-shadow: 4px 4px 6px rgba(0,0,0,0.6);
+      }
+      h2{
+        font-family: "cooper-black-std", serif;
+        font-weight: 200;
+        font-style: normal;
+        font-size: 1.5em;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        letter-spacing: 1px;
+        text-shadow: 4px 4px 6px rgba(0,0,0,0.6);
       }
       p{
         font-family: Arial, Helvetica, sans-serif;
@@ -50,6 +43,14 @@
 
   main{
     background-color: black;
+  }
+
+  .DoneField{
+    top: 20%;
+    left: 25%; 
+    width: 50vw;
+    backdrop-filter: blur(5px);
+    
   }
 
   .welcomeBtn{
@@ -69,7 +70,3 @@
   }
 
 </style>
-
-<script setup>
-import { FwbButtonGroup, FwbButton,  } from 'flowbite-vue'
-</script>

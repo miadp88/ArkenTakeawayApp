@@ -73,14 +73,6 @@
   <style>
   /* Add any custom styles for the navbar here */
   </style>
-  
-  <script setup>
-  import {
-    FwbButton,
-    FwbNavbar,
-    FwbNavbarLogo,
-  } from 'flowbite-vue'
-  </script>
 
 <style>
   .NavBar{

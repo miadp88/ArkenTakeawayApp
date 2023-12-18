@@ -3,7 +3,7 @@ import WelcomeView from '../Views/WelcomeView.vue'
 import MenuView from '../Views/MenuView.vue'
 import MenuAddView from '../Views/MenuAddView.vue'
 import UserInfoView from '../Views/UserInfoView.vue'
-import HeroAll from '../components/Layout/HeroAll.vue'
+import HeroAll from '../components/Layout/HeroAllComponent.vue'
 
 
 const routes = [

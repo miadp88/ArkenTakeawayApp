@@ -13,6 +13,7 @@
               <a target='_blank' href='foodiesapp://food/1001' class='text-black block mt-10 w-full justify-center items-center px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-btnBlue rounded-[14px] hover:bg-btnBlueHover focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                   Bestil
               </a>
+              
           </div>
         </div>
     </div>

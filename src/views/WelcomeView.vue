@@ -21,9 +21,9 @@
 
 /*imports*/
 
-import NavBar from '@/components/Layout/NavBar.vue'
-import Footer from '@/components/Layout/Footer.vue'
-import HeroWelcome from '@/components/Layout/HeroWelcome.vue'
+import NavBar from '@/components/Layout/NavBarComponent.vue'
+import Footer from '@/components/Layout/FooterComponent.vue'
+import HeroWelcome from '@/components/Layout/HeroWelcomeComponent.vue'
 
 </script>
 

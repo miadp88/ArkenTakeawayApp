@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import HeroAll from "@/components/Layout/HeroAll.vue"
-import Card from '@/components/Layout/Card.vue'
-import NavBarOrder from '@/components/Layout/NavBarOrder.vue'
+import HeroAll from "@/components/Layout/HeroAllComponent.vue"
+import Card from '@/components/Layout/CardComponent.vue'
+import NavBarOrder from '@/components/Layout/NavBarOrderComponent.vue'
 </script>
