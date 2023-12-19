@@ -1,12 +1,12 @@
 <!-- src/views/MenuView.vue -->
 <template>
-  <div>
+  <div class="menu-view">
     <NavBarOrder />
-    <main>
+    <main class="main-content">
       <HeroAll />
-      <section>
+      <section class="CardSection">
         <h1 class="mt-20 text-5xl font-extrabold tracking-tight text-center leading-none text-white md:text-5xl lg:text-6xl dark:text-white tracking-wider">Vælg Sæson Menu</h1>
-        <div class="flex items-center justify-center min-h-screen px-6">
+        <div class="CardWrapper flex mt-10 justify-center min-h-fit px-6">
           <Card v-for="menu in getMenu()" :key="menu.id" :menu="menu" :imagePath="menu.image" />
         </div>
       </section>
@@ -52,3 +52,25 @@ const getMenu = () => {
 };
 
 </script>
+
+<style scoped>
+.menu-view {
+  position: relative;
+}
+
+.main-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.nav-bar-order {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1!important; /* Adjust as needed */
+}
+</style>

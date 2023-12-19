@@ -1,7 +1,7 @@
 <!-- src/components/Layout/CardComponent.vue -->
 <template>
-  <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 px-2 mb-4">
-    <div class="w-full max-w-md mx-auto bg-welcomebtnbackground rounded-3xl shadow-xl overflow-hidden">
+  <div class="w-full h-fit sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 px-2 mb-4">
+    <div class="w-full max-w-md mx-auto bg-welcomeCardbackground rounded-3xl shadow-xl overflow-hidden">
       <!-- Image at the top -->
       <div class="h-40 bg-cover bg-no-repeat" :style="{ backgroundImage: 'url(' + imagePath + ')' }"></div>
 
