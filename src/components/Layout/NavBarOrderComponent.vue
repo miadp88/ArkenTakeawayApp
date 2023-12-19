@@ -8,17 +8,18 @@
       viewBox="0 0 24 24"
       stroke="currentColor"
     >
+
       <path
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="2"
-        d="M10 19l-7-7m0 0l7-7m-7 7h18"
+        d="M15.75 19.5 8.25 12l7.5-7.5"
       ></path>
     </svg>
 
     <!-- Logo in the middle -->
     <router-link to="/">
-      <img class="h-8" src="../../assets/images/13694_logo.jpg" alt="Logo" />
+      <img class="h-8" src="../../assets/images/ArkenLogoBlaa.png" alt="Logo" />
     </router-link>
 
     <!-- Cart in the top right corner -->
