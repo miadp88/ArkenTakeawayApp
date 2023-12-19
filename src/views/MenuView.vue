@@ -71,7 +71,7 @@ const getMenu = () => {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1!important; /* Adjust as needed */
+  z-index: 1!important; 
 }
 
 .head1, .head2 {

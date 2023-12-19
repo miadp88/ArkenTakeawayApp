@@ -63,13 +63,12 @@
   }
     }
    
-
-  
-  
-    
-
-
-
+}
+@media screen and (max-width: 768px) {
+  main {
+    width: 100vw;
+  }
 }
  
 </style>
+
