@@ -73,4 +73,16 @@ const getMenu = () => {
   right: 0;
   z-index: 1!important; /* Adjust as needed */
 }
+
+.head1, .head2 {
+  margin-top: 10vh !important;
+  font-size: 5em !important;
+}
+
+
+@media screen and (max-width: 511px) {
+  h1 {
+    font-size: 2em !important;
+  }
+}
 </style>
