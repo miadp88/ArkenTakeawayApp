@@ -3,7 +3,7 @@
   <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 px-2 mb-4">
     <div class="w-full max-w-md mx-auto bg-welcomebtnbackground rounded-3xl shadow-xl overflow-hidden">
       <!-- Image at the top -->
-      <div class="h-40 bg-cover" :style="{ backgroundImage: 'url(' + menu.image + ')' }"></div>
+      <div class="h-40 bg-cover bg-no-repeat" :style="{ backgroundImage: 'url(' + imagePath + ')' }"></div>
 
       <div class="p-4 sm:p-6">
         <!-- h1 element -->
@@ -30,16 +30,12 @@ import { ref } from 'vue';
 import Notification from '../../components/Layout/Notification.vue';
 import { useCartStore } from '../../stores/index';
 
-// Import the image
-import menuImage from '../../assets/images/Menu1.jpeg';
-
-const props = defineProps(['menu']);
+const props = defineProps(['menu', 'imagePath']);
 
 const showNotification = ref(false);
 const notificationMessage = ref('');
 
-// Use the imported image
-const menu = { ...props.menu, image: menuImage };
+const menu = { ...props.menu, image: props.imagePath };
 
 const addToCart = () => {
   useCartStore().addMenu(menu);

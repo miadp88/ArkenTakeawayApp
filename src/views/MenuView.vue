@@ -1,3 +1,4 @@
+<!-- src/views/MenuView.vue -->
 <template>
   <div>
     <NavBarOrder />
@@ -6,7 +7,7 @@
       <section>
         <h1 class="mt-20 text-5xl font-extrabold tracking-tight text-center leading-none text-white md:text-5xl lg:text-6xl dark:text-white tracking-wider">Vælg Sæson Menu</h1>
         <div class="flex items-center justify-center min-h-screen px-6">
-          <Card v-for="menu in menus" :key="menu.id" :menu="menu" />
+          <Card v-for="menu in getMenu()" :key="menu.id" :menu="menu" :imagePath="menu.image" />
         </div>
       </section>
     </main>
@@ -22,17 +23,32 @@ import { ref } from "vue";
 const menus = ref([
   {
     id: 1,
-    name: "Dummy Menu 1",
-    price: 10,
-    image: "path/to/your/image1.jpg", 
+    name: "Menu 1",
+    price: 275,
+    image: "../../src/assets/images/Menu1.jpeg", 
   },
   {
     id: 2,
-    name: "Dummy Menu 2",
-    price: 15,
-    image: "path/to/your/image2.jpg", 
+    name: "Menu 2",
+    price: 150,
+    image: "../../src/assets/images/Menu2.jpeg", 
   },
- 
+  {
+    id: 3,
+    name: "Menu 3",
+    price: 150,
+    image: "../../src/assets/images/Menu5.jpg", 
+  },
+  {
+    id: 4,
+    name: "Menu 4",
+    price: 150,
+    image: "../../src/assets/images/Menu6.jpg", 
+  },
 ]);
+
+const getMenu = () => {
+  return menus.value.map(menu => ({ ...menu }));
+};
 
 </script>

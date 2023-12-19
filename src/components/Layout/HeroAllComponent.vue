@@ -38,7 +38,6 @@
 
   .hero{
     height: 100vh;
-    
   }
 
 

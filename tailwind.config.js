@@ -17,7 +17,6 @@ module.exports = {
       NavColor: 'rgba(0, 0, 0, 0.75)',
       Formbackground: 'rgba(112, 112, 112, 0.25)',
       Whitebtn: '255, 255, 255'
-
-    }
+    },
   }
 }

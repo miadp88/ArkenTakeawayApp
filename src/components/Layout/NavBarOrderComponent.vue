@@ -1,25 +1,25 @@
 <template>
-  <nav class="flex items-center justify-between p-6 bg-NavColor">
+  <nav class="flex items-center justify-between p-3 px-6 bg-NavColor">
     <!-- Arrow pointing left on the left side -->
-    <svg
-      class="w-8 h-8 cursor-pointer text-white"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M15.75 19.5 8.25 12l7.5-7.5"
-      ></path>
-    </svg>
+    <div class="w-8 h-8 cursor-pointer text-white" @click="goBack">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15.75 19.5 8.25 12l7.5-7.5"
+        ></path>
+      </svg>
+    </div>
 
     <!-- Logo in the middle -->
     <router-link to="/">
-      <img class="h-8" src="../../assets/images/ArkenLogoBlaa.png" alt="Logo" />
+      <img class="h-20" src="../../assets/images/ArkenLogoBlaa.png" alt="Logo" />
     </router-link>
 
     <!-- Cart in the top right corner -->
@@ -51,19 +51,26 @@
 
 <script>
 import { ref, computed } from 'vue';
-import { useCartStore } from '../../stores/index'; // Adjust the path as needed
+import { useCartStore } from '../../stores/index';
+import { useRouter } from 'vue-router';
 
 export default {
   setup() {
     const cartCount = computed(() => useCartStore().getMenuCount());
+    const router = useRouter();
 
     const showCart = () => {
       // Your existing showCart logic...
     };
 
+    const goBack = () => {
+      router.back(); // Go back to the previous page
+    };
+
     return {
       cartCount,
       showCart,
+      goBack,
     };
   },
 };
