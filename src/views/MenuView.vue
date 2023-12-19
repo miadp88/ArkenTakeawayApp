@@ -5,7 +5,8 @@
     <main class="main-content">
       <HeroAll />
       <section class="CardSection">
-        <h1 class="mt-20 text-5xl font-extrabold tracking-tight text-center leading-none text-white md:text-5xl lg:text-6xl dark:text-white tracking-wider">Vælg Sæson Menu</h1>
+        <h1 class="mt-20 text-5xl font-extrabold tracking-tight text-center leading-none text-white md:text-5xl lg:text-6xl dark:text-white tracking-wider">
+        Vælg Sæson Menu</h1>
         <!-- Use flex and flex-wrap classes for responsiveness -->
         <div class="CardWrapper flex flex-wrap mt-10 justify-center min-h-fit px-6">
           <Card v-for="menu in getMenu()" :key="menu.id" :menu="menu" :imagePath="menu.image" />
