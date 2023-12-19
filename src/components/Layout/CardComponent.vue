@@ -13,7 +13,7 @@
         <h2 class="text-white text-center text-lg">{{ menu.price }} DDK</h2>
 
         <button
-          class="text-black block mt-6 w-full justify-center items-center px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-btnBlue rounded-[14px] hover:bg-btnBlueHover focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80"
+          class=" btnBestil text-black block mt-6 w-full justify-center items-center px-4 py-3  tracking-wide text-center capitalize transition-colors duration-300 transform bg-btnBlue rounded-[14px] hover:bg-btnBlueHover focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80"
           @click.prevent="addToCart"
         >
           Bestil
@@ -50,3 +50,9 @@ const addToCart = () => {
   }, 3000);
 };
 </script>
+
+<style>
+  .btnBestil{
+    font-size:medium;
+  }
+</style>
