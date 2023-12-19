@@ -13,10 +13,10 @@
         
         <!-- Modified Next button with right-pointing arrow SVG -->
         <div class="btnNext m-20 flex items-center justify-center">
-          <router-link to="/menuAddView" class="p-4 bg-transparent text-center text-white rounded-full flex items-center">
+          <router-link to="/menuAddView" class="p-4 bg-transparent text-center text-white rounded-full hover:bg-blue-700 flex items-center">
             <span>Next</span>
             <!-- Add an SVG icon to the right -->
-            <span class="SpanBtn ml-5">
+            <span class="ml-8">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -80,23 +80,17 @@ const getMenu = () => {
   z-index: -1;
 }
 
-.nav-bar-order {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1!important; 
-}
-
-.head1, .head2 {
-  margin-top: 10vh !important;
-  font-size: 5em !important;
-}
-
-
-@media screen and (max-width: 511px) {
-  h1 {
-    font-size: 2em !important;
-  }
+.btnNext {
+  border: solid 3px white;
+  color: white;
+  width: 13em;
+  border-radius: 22em;
+  margin: auto;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  font-size: x-large;
+  height: 2em;
+  letter-spacing: 5px;
+  text-align: center;
 }
 </style>
