@@ -49,5 +49,4 @@ const addToCart = () => {
     showNotification.value = false;
   }, 3000);
 };
-
 </script>
