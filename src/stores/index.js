@@ -1,6 +1,10 @@
 // index.js (path: C:\Users\miadp\Desktop\ArkenFoodDevApp\ArkenTakeawayApp\src\stores\index.js)
 import { defineStore } from 'pinia';
 
+// Import the Auth store
+import { useAuthStore } from '@/stores/auth'; // Update the path accordingly
+
+// Your existing Cart store
 export const useCartStore = defineStore('cart', {
   state: () => ({
     selectedMenus: [],
@@ -42,3 +46,5 @@ export const useCartStore = defineStore('cart', {
     },
   },
 });
+
+export { useAuthStore }; // Export the Auth store

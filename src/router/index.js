@@ -3,11 +3,11 @@ import WelcomeView from '../Views/WelcomeView.vue'
 import MenuView from '../Views/MenuView.vue'
 import MenuAddView from '../Views/MenuAddView.vue'
 import UserInfoView from '../Views/UserInfoView.vue'
-import HeroAll from '../components/Layout/HeroAllComponent.vue'
 import CartView from '../views/CartView.vue'
 import DoneOrderView from '../Views/DoneOrderView.vue'
 import StatsView from '../Views/StatsView.vue'
-import LoginView from '../Views/LoginView.vue'; // Import the LoginView component
+import LoginView from '../Views/LoginView.vue'; 
+import OrderView from '../Views/OrderView.vue'; 
 
 const routes = [
   {
@@ -46,15 +46,16 @@ const routes = [
     component: LoginView
   },
   {
-    path: '/src/components/Layout/HeroAll.vue',
-    name: 'heroAll',
-    component: HeroAll
-  },
-  {
     path: '/CartView',
     name: 'cartView',
     component: CartView
-  }
+  },
+  {
+    path: '/orderView',
+    name: 'orderView',
+    component: OrderView,
+  },
+  
 ]
 
 const router = createRouter({
