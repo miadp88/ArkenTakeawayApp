@@ -4,6 +4,7 @@ import MenuView from '../Views/MenuView.vue'
 import MenuAddView from '../Views/MenuAddView.vue'
 import UserInfoView from '../Views/UserInfoView.vue'
 import HeroAll from '../components/Layout/HeroAllComponent.vue'
+import CartView from '../views/CartView.vue'
 
 
 const routes = [
@@ -41,6 +42,11 @@ const routes = [
   path: '/src/components/Layout/HeroAll.vue',
   name: 'heroAll',
   component: HeroAll
+},
+{
+  path: '/CartView',
+  name: 'cartView',
+  component: CartView
 }
 
   
