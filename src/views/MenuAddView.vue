@@ -15,6 +15,7 @@
         <div class="CardWrapper flex flex-wrap mt-10 justify-center min-h-fit px-6">
           <!-- Use Card component for side orders -->
           <Card v-for="sideOrder in getSideOrders()" :key="sideOrder.id" :menu="sideOrder" :imagePath="sideOrder.image" />
+          <a href="" class="scroll-down-link scroll-down-arrow" data-iconfont="ETmodules" data-icon></a>
         </div>
         <div class="btnNext m-20 flex items-center justify-center">
           <router-link to="/userInfoView" class="p-4 bg-transparent text-center text-white rounded-full hover:text-btnBlue flex items-center">

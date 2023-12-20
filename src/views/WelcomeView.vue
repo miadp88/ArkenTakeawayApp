@@ -7,7 +7,7 @@
     <div class="content-wrapper">
       <main>
         <HeroWelcome />
-        <a href="" class="scroll-down-link scroll-down-arrow" data-iconfont="ETmodules" data-icon></a>
+        
       </main>
 
       <router-view />

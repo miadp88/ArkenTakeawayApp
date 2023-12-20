@@ -9,6 +9,7 @@
         <!-- Use flex and flex-wrap classes for responsiveness -->
         <div class="CardWrapper flex flex-wrap mt-10 justify-center min-h-fit px-6">
           <Card v-for="menu in getMenu()" :key="menu.id" :menu="menu" :imagePath="menu.image" />
+          <a href="" class="scroll-down-link scroll-down-arrow" data-iconfont="ETmodules" data-icon></a>
         </div>
         
         <!-- Modified Next button with right-pointing arrow SVG -->
