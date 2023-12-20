@@ -41,5 +41,15 @@ header {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  margin-top: -10px; /* Remove white space between header and main */
+}
+
+main {
+  flex-grow: 1;
+  padding-bottom: 20vh;
+}
+
+.FooterWelcome {
+  margin-top: -19vh; 
 }
 </style>
