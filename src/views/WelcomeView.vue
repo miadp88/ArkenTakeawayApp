@@ -6,7 +6,7 @@
     <div main-content-weapper>
       <main class="main-content">
         <HeroWelcome />
-        <section class="SpacerHandler"></section>
+       
         <a href="" class="scroll-down-link scroll-down-arrow" data-iconfont="ETmodules" data-icon>
         </a>
       </main>

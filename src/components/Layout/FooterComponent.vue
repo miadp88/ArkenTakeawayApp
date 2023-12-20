@@ -40,8 +40,7 @@
 </template>
 
 <style>
-
-.footerWelcome{
-     position: absolute;
-    }
+  footer{
+   
+  }
 </style>
