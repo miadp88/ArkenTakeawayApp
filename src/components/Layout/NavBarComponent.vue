@@ -10,7 +10,7 @@
           </div>
           <div class="flex justify-center w-full">
             <div class="flex-shrink-0 flex items-center">
-              <img src="../../assets/images/13694_logo.jpg" alt="Logo" class="h-12 w-auto">
+              <img src="../../assets/images/ArkenLogoBlaa.png" alt="Logo" class="h-12 w-auto">
             </div>
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:items-center">
