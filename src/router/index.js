@@ -5,7 +5,9 @@ import MenuAddView from '../Views/MenuAddView.vue'
 import UserInfoView from '../Views/UserInfoView.vue'
 import HeroAll from '../components/Layout/HeroAllComponent.vue'
 import CartView from '../views/CartView.vue'
-
+import DoneOrderView from '../Views/DoneOrderView.vue'
+import StatsView from '../Views/StatsView.vue'
+import LoginView from '../Views/LoginView.vue'; // Import the LoginView component
 
 const routes = [
   {
@@ -39,20 +41,21 @@ const routes = [
     component: StatsView
   },
   {
-  path: '/src/components/Layout/HeroAll.vue',
-  name: 'heroAll',
-  component: HeroAll
-},
-{
-  path: '/CartView',
-  name: 'cartView',
-  component: CartView
-}
-
-  
+    path: '/LoginView', 
+    name: 'login',
+    component: LoginView
+  },
+  {
+    path: '/src/components/Layout/HeroAll.vue',
+    name: 'heroAll',
+    component: HeroAll
+  },
+  {
+    path: '/CartView',
+    name: 'cartView',
+    component: CartView
+  }
 ]
-import DoneOrderView from '../Views/DoneOrderView.vue'
-import StatsView from '../Views/StatsView.vue'
 
 const router = createRouter({
   history: createWebHashHistory(),

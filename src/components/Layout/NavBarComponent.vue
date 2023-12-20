@@ -1,6 +1,5 @@
-
-  <template>
-    <nav class="flex items-center justify-between p-3 px-6 bg-NavColor">
+<template>
+  <nav class="flex items-center justify-between p-3 px-6 bg-NavColor">
     <!-- Arrow pointing left on the left side -->
     <div class="w-8 h-8 text-transparent" @click="goBack">
       <svg
@@ -17,7 +16,6 @@
         ></path>
       </svg>
     </div>
-    
 
     <!-- Logo in the middle -->
     <router-link to="/">
@@ -25,55 +23,53 @@
     </router-link>
 
     <!-- Login in the top right corner -->
-    <div class="relative" >
-      <svg
-        class="w-8 h-8 cursor-pointer text-white"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"
-        ></path>
-      </svg>
-
-    </div>
+    <router-link to="/LoginView">
+      <div class="relative">
+        <svg
+          class="w-8 h-8 cursor-pointer text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"
+          ></path>
+        </svg>
+      </div>
+    </router-link>
   </nav>
-  </template>
-  
-  <script>
-  import { ref } from 'vue';
-  import { useRouter } from 'vue-router';
-  
-  export default {
-    setup() {
-      const router = useRouter();
-      const menuOpen = ref(false);
-  
-      const goBack = () => {
-        router.go(-1);
-      };
-  
-      const toggleMenu = () => {
-        menuOpen.value = !menuOpen.value;
-      };
-  
-      return {
-        goBack,
-        menuOpen,
-        toggleMenu,
-      };
-    },
-  }
-  </script>
-  
-  <style>
-  /* Add any custom styles for the navbar here */
-  </style>
+</template>
+
+<script>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+export default {
+  setup() {
+    const router = useRouter();
+    const menuOpen = ref(false);
+
+    const goBack = () => {
+      router.go(-1);
+    };
+
+    const toggleMenu = () => {
+      menuOpen.value = !menuOpen.value;
+    };
+
+    return {
+      goBack,
+      menuOpen,
+      toggleMenu,
+    };
+  },
+};
+</script>
+
 
 <style>
   .NavBar{
