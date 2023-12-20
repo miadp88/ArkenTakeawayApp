@@ -1,4 +1,5 @@
 <!-- CartView.vue -->
+
 <template>
   <div class="cart-view">
     <NavBarOrder />
@@ -18,19 +19,21 @@
                 <div class="text-lg font-bold">{{ item.name }}</div>
                 <div>{{ item.price }} DDK</div>
                 <div class="flex items-center mt-2">
-                  <button @click="decrement(item.id)" class="cart-counter-btn">-</button>
+                  <button @click="decrement(item)" class="cart-counter-btn">-</button>
                   <div class="mx-2">{{ item.quantity }}</div>
-                  <button @click="increment(item.id)" class="cart-counter-btn">+</button>
+                  <button @click="increment(item)" class="cart-counter-btn">+</button>
                 </div>
               </div>
-              <button @click="removeItem(item.id)" class="delete-btn">
+              <button @click="confirmRemoveItem(item)" class="delete-btn">
                 <span>&#128465;</span>
               </button>
             </div>
           </div>
+
           <div class="text-white text-center mt-4">
             Betales ved afhentning i restaurenten Total: {{ totalAmount }} DDK
           </div>
+
           <div class="mt-8 flex hover">
             <button @click="checkout" class="btnCheckout">
               Bestil
@@ -45,27 +48,33 @@
 <script setup>
 import NavBarOrder from "@/components/Layout/NavBarOrderComponent.vue";
 import { useCartStore } from "@/stores/index";
-import { computed } from "vue";
+import { ref, computed } from "vue";
 
 const cartStore = useCartStore();
 const cartItems = computed(() => cartStore.selectedMenus);
-const totalAmount = computed(() => cartStore.getTotalAmount());
+const totalAmount = computed(() => {
+  return cartItems.value.reduce((total, item) => total + item.price * item.quantity, 0);
+});
 
 const checkout = () => {
   // Perform checkout logic, e.g., navigate to a checkout page
   // You can also trigger a success notification here if needed
 };
 
-const increment = (menuId) => {
-  cartStore.incrementQuantity(menuId);
+const increment = (item) => {
+  cartStore.incrementQuantity(item.id);
 };
 
-const decrement = (menuId) => {
-  cartStore.decrementQuantity(menuId);
+const decrement = (item) => {
+  cartStore.decrementQuantity(item.id);
 };
 
-const removeItem = (menuId) => {
-  cartStore.removeItem(menuId);
+const confirmRemoveItem = (item) => {
+  const isConfirmed = window.confirm("Er du sikker på at du vil slette alle bestillingerne af denne menu? brug plus og minus knapperne hvis du vil tilføje eller fjerne antal bestillinger af denne menu?");
+
+  if (isConfirmed) {
+    cartStore.removeItem(item.id);
+  }
 };
 </script>
 
