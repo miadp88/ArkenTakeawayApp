@@ -12,9 +12,13 @@
           Du har intet i indkøbskurven
         </div>
         <div v-else>
+          <!-- Display cart items in cards -->
           <div v-for="item in cartItems" :key="item.id" class="cart-item-card text-white mb-4">
             <div class="flex items-center relative">
+              <!-- Menu image on the left -->
               <div class="w-20 h-20 bg-cover bg-no-repeat rounded-lg" :style="{ backgroundImage: 'url(' + item.image + ')' }"></div>
+
+              <!-- Menu name, price, and counter -->
               <div class="flex flex-col ml-4">
                 <div class="text-lg font-bold">{{ item.name }}</div>
                 <div>{{ item.price }} DDK</div>
@@ -24,16 +28,21 @@
                   <button @click="increment(item)" class="cart-counter-btn">+</button>
                 </div>
               </div>
+
+              <!-- Delete button -->
               <button @click="confirmRemoveItem(item)" class="delete-btn">
+                <!-- Replace the content below with your garbage bin SVG -->
                 <span>&#128465;</span>
               </button>
             </div>
           </div>
 
+          <!-- Total price -->
           <div class="text-white text-center mt-4">
             Betales ved afhentning i restaurenten Total: {{ totalAmount }} DDK
           </div>
 
+          <!-- Checkout button -->
           <div class="mt-8 flex hover">
             <button @click="checkout" class="btnCheckout">
               Bestil
@@ -66,11 +75,16 @@ const increment = (item) => {
 };
 
 const decrement = (item) => {
-  cartStore.decrementQuantity(item.id);
+  if (item.quantity === 1) {
+    // If there is only one left, show confirmation
+    confirmRemoveItem(item);
+  } else {
+    cartStore.decrementQuantity(item.id);
+  }
 };
 
 const confirmRemoveItem = (item) => {
-  const isConfirmed = window.confirm("Er du sikker på at du vil slette alle bestillingerne af denne menu? brug plus og minus knapperne hvis du vil tilføje eller fjerne antal bestillinger af denne menu?");
+  const isConfirmed = window.confirm("Are you sure you want to delete this card?");
 
   if (isConfirmed) {
     cartStore.removeItem(item.id);
