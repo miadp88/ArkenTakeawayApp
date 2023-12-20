@@ -1,8 +1,8 @@
 
   <template>
-    <nav class="bg-NavColor">
+    <nav class="NavBar bg-NavColor justify-between p-3 px-6 bg-NavColor">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between">
           <div class="flex">
             <div class="flex-shrink-0 flex items-center">
               
@@ -10,12 +10,12 @@
           </div>
           <div class="flex justify-center w-full">
             <div class="flex-shrink-0 flex items-center">
-              <img src="../../assets/images/ArkenLogoBlaa.png" alt="Logo" class="h-12 w-auto">
+              <img class="h-20" src="../../assets/images/ArkenLogoBlaa.png" alt="Logo" />
             </div>
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:items-center">
             
-            <router-link to="/" class=" mr-10 text-white px-3 py-2 rounded-md text-sm font-medium" active-class="bg-black">
+            <router-link to="/" class=" text-white px-3 py-2 rounded-md text-sm font-medium" active-class="bg-black">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
               </svg>
@@ -76,6 +76,6 @@
 
 <style>
   .NavBar{
-    background-color: black!important;
+    height: 11.5vh;
   }
 </style>

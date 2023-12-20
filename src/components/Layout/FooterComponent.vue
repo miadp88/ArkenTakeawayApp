@@ -42,6 +42,6 @@
 <style>
 
 .footerWelcome{
-      margin-top: -18.4vh;
+     position: absolute;
     }
 </style>

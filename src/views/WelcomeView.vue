@@ -39,18 +39,8 @@ import HeroWelcome from '@/components/Layout/HeroWelcomeComponent.vue'
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1;
-  .main-content-wrapper {
-    position: relative;
-    z-index: 0; /* Set the z-index for the main content */
-  }
-  .main-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1; /* Set the z-index for the footer */
-  }
+  z-index: -1
+
 }
 
 
