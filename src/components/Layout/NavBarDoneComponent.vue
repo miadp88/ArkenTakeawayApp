@@ -1,55 +1,79 @@
+NavBarComponent.vue(path: C:\Users\miadp\Desktop\ArkenFoodDevApp\ArkenTakeawayApp\src\components\Layout\NavBarComponent.vue):
 
-  <template>
-    <nav class="bg-NavColor">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-          <div class="flex">
-            <div class="flex-shrink-0 flex items-center">
-            </div>
-          </div>
-          <div class="flex justify-center w-full">
-            <div class="flex-shrink-0 flex items-center">
-              <img src="../../assets/images/13694_logo.jpg" alt="Logo" class="h-12 w-auto">
-            </div>
-          </div>
+<template>
+  <nav class="flex items-center justify-between p-3 px-6 bg-NavColor">
+    <!-- Arrow pointing left on the left side -->
+    <div class="w-8 h-8 cursor-pointer text-white" @click="goBack">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15.75 19.5 8.25 12l7.5-7.5"
+        ></path>
+      </svg>
+    </div>
+
+    <!-- Logo in the middle -->
+    <router-link to="/">
+      <img class="h-20" src="../../assets/images/ArkenLogoBlaa.png" alt="Logo" />
+    </router-link>
+
+    <!-- Cart in the top right corner -->
+    <div class="relative" @click="showCart">
+      <svg
+        class="w-8 h-8 cursor-pointer text-white"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+        ></path>
+      </svg>
+
+      <!-- Cart count badge -->
+      <div class="absolute top-0 right-0 -mt-1 -mr-1">
+        <div class="bg-red-500 text-white rounded-full w-4 h-4 text-xs flex items-center justify-center">
+          {{ cartCount }}
         </div>
       </div>
-    </nav>
-  </template>
-  
-  <script>
-  import { ref } from 'vue';
-  import { useRouter } from 'vue-router';
-  
-  export default {
-    setup() {
-      const router = useRouter();
-      const menuOpen = ref(false);
-  
-      const goBack = () => {
-        router.go(-1);
-      };
-  
-      const toggleMenu = () => {
-        menuOpen.value = !menuOpen.value;
-      };
-  
-      return {
-        goBack,
-        menuOpen,
-        toggleMenu,
-      };
-    },
-  }
-  </script>
-  
-  <style>
-  /* Add any custom styles for the navbar here */
-  </style>
-  
+    </div>
+  </nav>
+</template>
 
-<style>
-  .NavBar{
-    background-color: black!important;
-  }
-</style>
+<script>
+import { ref, computed } from 'vue';
+import { useCartStore } from '../../stores/index';
+import { useRouter } from 'vue-router';
+
+export default {
+  setup() {
+    const cartCount = computed(() => useCartStore().getMenuCount());
+    const router = useRouter();
+
+    const showCart = () => {
+      // Your existing showCart logic...
+    };
+
+    const goBack = () => {
+      router.back(); // Go back to the previous page
+    };
+
+    return {
+      cartCount,
+      showCart,
+      goBack,
+    };
+  },
+};
+</script>

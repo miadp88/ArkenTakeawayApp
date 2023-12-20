@@ -1,4 +1,3 @@
-<!-- src/views/MenuView.vue -->
 <template>
   <div class="menu-view">
     <NavBarOrder />
