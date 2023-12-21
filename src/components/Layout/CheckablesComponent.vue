@@ -2,11 +2,11 @@
   <div class="checkables">
     <label>
       <input type="checkbox" v-model="checkable1" @change="handleChange('Checkable 1')" />
-      Checkable 1
+      Kommentarer 
     </label>
     <label>
       <input type="checkbox" v-model="checkable2" @change="handleChange('Checkable 2')" />
-      Checkable 2
+      Kuvert størrelse
     </label>
   </div>
 </template>

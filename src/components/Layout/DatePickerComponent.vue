@@ -1,6 +1,6 @@
 <template>
   <div class="date-picker">
-    <label>Date Picker:</label>
+    <label>Dato:</label>
     <input type="date" v-model="selectedDate" />
   </div>
 </template>

@@ -12,8 +12,8 @@
   
       <!-- Center with title and subtitle -->
       <div class="center-side">
-        <div class="title">Title</div>
-        <div class="subtitle">Subtitle</div>
+        <h1 class="title">BESTILLINGER</h1>
+        <h2 class="subtitle">(ADMIN)</h2>
       </div>
   
       <!-- Right side with red box -->
@@ -21,6 +21,7 @@
         <InfoBoxComponent />
       </div>
     </div>
+    <hr>
   </template>
   
   <script setup>
@@ -35,8 +36,9 @@
   .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Align items at the start (top) */
     padding: 10px;
+    margin-top: 3vh;
   }
   
   .left-side {
@@ -51,13 +53,25 @@
   
   .center-side {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    margin-top: -3vh; 
+    margin-left: -15vw;
+    .title{
+        font-size: 5em;
+    }
+    .subtitle{
+        font-size: 3em;
+    }
   }
-  
-  .right-side {
-    /* Adjust styles as needed for the right side */
+  hr{
+        border: 4px solid rgb(228, 228, 228); 
   }
 
-  .DateCheckMargin{
+  
+  .DateCheckMargin {
     margin-right: 2vw;
   }
   </style>
