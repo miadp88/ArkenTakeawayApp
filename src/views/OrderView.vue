@@ -1,32 +1,33 @@
 <template>
-    <div>
-      <!-- Your header component here -->
-      <div class="header">
-        <!-- Left side with search bar and date picker -->
-        <div class="left-side">
-          <SearchBarComponent />
-          <div class="date-checkables">
-            <DatePickerComponent />
-            <div class="DateCheckMargin"></div>
-            <CheckablesComponent />
-          </div>
-        </div>
-    
-        <!-- Center with title and subtitle -->
-        <div class="center-side">
-          <h1 class="title">BESTILLINGER</h1>
-          <h2 class="subtitle">(ADMIN)</h2>
-        </div>
-    
-        <!-- Right side with red box -->
-        <div class="right-side">
-          <InfoBoxComponent />
+  <div>
+    <!-- Your header component here -->
+    <div class="header">
+      <!-- Left side with search bar and date picker -->
+      <div class="left-side">
+        <SearchBarComponent />
+        <div class="date-checkables">
+          <DatePickerComponent />
+          <div class="DateCheckMargin"></div>
+          <CheckablesComponent />
         </div>
       </div>
-      <hr>
   
-      <!-- Your table -->
-      <table class="order-table">
+      <!-- Center with title and subtitle -->
+      <div class="center-side">
+        <h1 class="title">BESTILLINGER</h1>
+        <h2 class="subtitle">(ADMIN)</h2>
+      </div>
+  
+      <!-- Right side with red box -->
+      <div class="right-side">
+        <InfoBoxComponent />
+      </div>
+    </div>
+    <hr>
+
+    <!-- Your table -->
+          <!-- Your table -->
+          <table class="order-table">
         <tbody>
           <tr>
             <td>Vælg alle checkable</td>
@@ -283,14 +284,21 @@
   </div>
 </template>
 
+<script setup>
+import SearchBarComponent from '@/components/Layout/SearchBarComponent.vue';
+import DatePickerComponent from '@/components/Layout/DatePickerComponent.vue';
+import CheckablesComponent from '@/components/Layout/CheckablesComponent.vue';
+import InfoBoxComponent from '@/components/Layout/InfoBoxComponent.vue';
+</script>
+
 <style scoped>
-/* Add your component-specific styles here */
+
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align items at the start (top) */
+  align-items: flex-start; 
   padding: 10px;
-  margin-top: 3vh;
+  margin-top: 1vh;
 }
 
 .left-side {
@@ -307,51 +315,39 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
-  margin-top: -3vh;
+  margin-top: 0; 
   margin-left: -15vw;
-  .title {
-    font-size: 5em;
-  }
-  .subtitle {
-    font-size: 3em;
-  }
 }
 
+/* Styles for the horizontal line */
 hr {
-  border: 4px solid rgb(228, 228, 228);
+  border: 4px solid rgb(228, 228, 228); 
+  margin-top: 20px; /* Adjust margin as needed */
 }
 
-.DateCheckMargin {
-  margin-right: 2vw;
-}
-
+/* Styles for the table */
 .order-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 20px; /* Adjust margin as needed */
 }
 
-.order-table td {
+.order-table td, .order-table th {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
 }
 
 .order-table th {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
   background-color: #f2f2f2;
-}
-.DateCheckMargin {
-  margin-right: 2vw;
 }
 
 .DateCheckMargin {
   margin-right: 2vw;
 }
+
 
 .order-table {
     width: 100%;
@@ -372,7 +368,5 @@ hr {
       td {
         border-bottom: 5px solid #cccccc;
       }
-
 </style>
 
-  
