@@ -1,35 +1,27 @@
 <template>
-    <div class="date-picker">
-      <label for="datepicker">Select Date:</label>
-      <input
-        v-model="selectedDate"
-        type="date"
-        id="datepicker"
-        @change="dateSelected"
-      />
-    </div>
-  </template>
-  
-  <script setup>
-  import { ref } from 'vue';
-  
-  const selectedDate = ref('');
-  
-  const dateSelected = () => {
-    // You can implement your logic when a date is selected
-    console.log('Selected Date:', selectedDate.value);
-  };
-  </script>
-  
-  <style scoped>
-  .date-picker {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-  
-  label {
-    margin-bottom: 5px;
-  }
-  </style>
-  
+  <div class="date-picker">
+    <label>Date Picker:</label>
+    <input type="date" v-model="selectedDate" />
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const selectedDate = ref('');
+
+// You can add any additional logic related to the date picker
+
+</script>
+
+<style scoped>
+.date-picker {
+  display: flex;
+  align-items: center;
+  margin-top: 8vh;
+}
+
+label {
+  margin-right: 10px;
+}
+</style>

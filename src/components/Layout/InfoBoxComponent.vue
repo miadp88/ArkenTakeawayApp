@@ -12,9 +12,9 @@
         Antal kuverter 25/12/23
         <div class="number-box">7402</div>
       </div>
-      <div class="info-line bold">
+      <div class="info-line bold pt-1">
         Kuverter i Alt 23-25/12/23
-        <div class="number-box">7402</div>
+        <div class="number-box ml-4">7402</div>
       </div>
     </div>
   </template>

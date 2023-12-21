@@ -5,6 +5,7 @@
         <SearchBarComponent />
         <div class="date-checkables">
           <DatePickerComponent />
+          <div class="DateCheckMargin"></div>
           <CheckablesComponent />
         </div>
       </div>
@@ -54,6 +55,10 @@
   
   .right-side {
     /* Adjust styles as needed for the right side */
+  }
+
+  .DateCheckMargin{
+    margin-right: 2vw;
   }
   </style>
   

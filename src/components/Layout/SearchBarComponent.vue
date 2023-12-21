@@ -1,7 +1,7 @@
 <template>
     <div class="search-bar">
       <input v-model="searchTerm" type="text" placeholder="Search..." />
-      <button @click="search">Search</button>
+      <button @click="search"></button>
     </div>
   </template>
   
