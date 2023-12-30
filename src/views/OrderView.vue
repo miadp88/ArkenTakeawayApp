@@ -1,8 +1,6 @@
 <template>
   <div>
-    <!-- Your header component here -->
     <div class="header">
-      <!-- Left side with search bar and date picker -->
       <div class="left-side">
         <SearchBarComponent />
         <div class="date-checkables">
@@ -12,21 +10,16 @@
         </div>
       </div>
   
-      <!-- Center with title and subtitle -->
       <div class="center-side">
         <h1 class="title">BESTILLINGER</h1>
         <h2 class="subtitle">(ADMIN)</h2>
       </div>
   
-      <!-- Right side with red box -->
       <div class="right-side">
         <InfoBoxComponent />
       </div>
     </div>
     <hr>
-
-    <!-- Your table -->
-          <!-- Your table -->
           <table class="order-table">
         <tbody>
           <tr>
@@ -323,12 +316,7 @@
             <td>(ikon) (ikon)</td>
           </tr>
           <tr>
-            <td class="checkable-cell">
-                <div class="checkbox-container">
-                    <label for="demo" class="containerX">
-                <input type="checkbox" class="checkboxX" /></label>
-            </div>
-        </td>
+            <td class="checkable-cell"><input type="checkbox" /></td>
             <td>7</td>
             <td>23/12/12 16.15</td>
             <td>25/12/23 21.01</td>
@@ -367,12 +355,7 @@
             <td>(ikon) (ikon)</td>
           </tr>
           <tr>
-            <td class="checkable-cell">
-                <div class="checkbox-container">
-                    <label for="demo" class="containerX">
-                <input type="checkbox" class="checkboxX" /></label>
-            </div>
-        </td>
+            <td class="checkable-cell"><input type="checkbox" /></td>
             <td>8</td>
             <td>24/12/12 17.00</td>
             <td>20/12/23 17.22</td>
@@ -411,12 +394,7 @@
           <td>(ikon) (ikon)</td>
         </tr>
         <tr>
-            <td class="checkable-cell">
-                <div class="checkbox-container">
-                    <label for="demo" class="containerX">
-                <input type="checkbox" class="checkboxX" /></label>
-            </div>
-        </td>
+            <td class="checkable-cell"><input type="checkbox" /></td>
           <td>9</td>
           <td>24/12/12 16.30</td>
           <td>02/12/23 14.57</td>
@@ -496,17 +474,17 @@ import InfoBoxComponent from '@/components/Layout/InfoBoxComponent.vue';
   margin-left: -15vw;
 }
 
-/* Styles for the horizontal line */
+
 hr {
   border: 4px solid rgb(228, 228, 228); 
-  margin-top: 20px; /* Adjust margin as needed */
+  margin-top: 20px; 
 }
 
-/* Styles for the table */
+
 .order-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px; /* Adjust margin as needed */
+  margin-top: 20px; 
 }
 
 .order-table td, .order-table th {
@@ -544,7 +522,7 @@ hr {
         border-bottom: 5px solid #cccccc;
       }
       .checkbox-container {
-    margin-top: 1vh; /* Adjust the margin as needed */
+    margin-top: 1vh;
   }
 
   .checkbox-container {
@@ -552,7 +530,6 @@ hr {
 }
 
 .checkbox-container input[type="checkbox"] {
-  /* Hide the default checkbox */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -568,7 +545,6 @@ hr {
 }
 
 .checkbox-container input[type="checkbox"]:checked {
-  /* Style for checked state */
   background-color: #fff;
   border: 2px solid #000;
 }
@@ -585,8 +561,7 @@ hr {
       
 
 .checkbox-container input[type="checkbox"]:checked::before {
-  /* Check mark icon */
-  content: '\2713'; /* Unicode check mark character */
+  content: '\2713'; 
   display: block;
   font-size: 0.8em;
   font-weight: bolder;

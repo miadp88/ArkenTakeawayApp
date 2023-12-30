@@ -69,8 +69,6 @@ const sideOrders = ref([
   },
   
 
-  
-  // Add more side orders as needed
 ]);
 
 const getSideOrders = () => {

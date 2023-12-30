@@ -154,18 +154,14 @@
 import { FwbButtonGroup, FwbButton } from 'flowbite-vue';
 
 const navigateToLogin = () => {
-  // Existing function to navigate to the login page
 };
 
 const navigateToSignUp = () => {
-  // Existing function to navigate to the sign-up page
 };
 
 const navigateToFeatures = () => {
-  // Existing function to navigate to the features page
 };
 
 const navigateToContact = () => {
-  // Existing function to navigate to the contact page
 };
 </script>

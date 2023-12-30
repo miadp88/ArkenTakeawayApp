@@ -1,6 +1,5 @@
 <template>
   <nav class="flex items-center justify-between p-3 px-6 bg-NavColor">
-    <!-- Arrow pointing left on the left side -->
     <div class="w-8 h-8 text-transparent" @click="goBack">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -17,12 +16,10 @@
       </svg>
     </div>
 
-    <!-- Logo in the middle -->
     <router-link to="/">
       <img class="h-20" src="../../assets/images/ArkenLogoBlaa.png" alt="Logo" />
     </router-link>
 
-    <!-- Login in the top right corner -->
     <router-link to="/LoginView">
       <div class="relative">
         <svg

@@ -1,15 +1,14 @@
-<!-- src/components/Layout/CardComponent.vue -->
+
 <template>
   <div class="w-full h-fit sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 px-2 mb-4">
     <div class="w-full max-w-md mx-auto bg-welcomeCardbackground rounded-3xl shadow-xl overflow-hidden">
-      <!-- Image at the top -->
+     
       <div class="h-40 bg-cover bg-no-repeat" :style="{ backgroundImage: 'url(' + imagePath + ')' }"></div>
 
       <div class="p-4 sm:p-6">
-        <!-- h1 element -->
+     
         <h1 class="font-bold text-white text-center text-2xl leading-7 mb-1">{{ menu.name }}</h1>
 
-        <!-- h2 element in the next line -->
         <h2 class="text-white text-center text-lg">{{ menu.price }} DDK</h2>
 
         <button
@@ -40,11 +39,10 @@ const menu = { ...props.menu, image: props.imagePath };
 const addToCart = () => {
   useCartStore().addMenu(menu);
 
-  // Set notification message
+
   notificationMessage.value = 'Your order is successfully added to the cart!';
   showNotification.value = true;
 
-  // Hide notification after 3 seconds (adjust as needed)
   setTimeout(() => {
     showNotification.value = false;
   }, 3000);

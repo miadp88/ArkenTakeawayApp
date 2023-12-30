@@ -18,7 +18,7 @@ const checkable1 = ref(false);
 const checkable2 = ref(false);
 
 const handleChange = (checkableName) => {
-  // You can implement your logic when a checkable is changed
+ 
   console.log(`${checkableName} changed to ${checkableName ? 'checked' : 'unchecked'}`);
 };
 </script>
@@ -31,6 +31,6 @@ const handleChange = (checkableName) => {
 }
 
 label {
-  margin-right: 20px; /* Adjust the margin based on your design */
+  margin-right: 20px; 
 }
 </style>

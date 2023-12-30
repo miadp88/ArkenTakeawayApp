@@ -10,7 +10,6 @@ import { ref } from 'vue';
 
 const selectedDate = ref('');
 
-// You can add any additional logic related to the date picker
 
 </script>
 

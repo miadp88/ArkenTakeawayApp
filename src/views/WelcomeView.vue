@@ -34,14 +34,14 @@ import HeroWelcome from '@/components/Layout/HeroWelcomeComponent.vue'
 }
 
 header {
-  z-index: 1; /* Ensure the header stays on top */
+  z-index: 1; 
 }
 
 .content-wrapper {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  margin-top: -10px; /* Remove white space between header and main */
+  margin-top: -10px; 
 }
 
 main {

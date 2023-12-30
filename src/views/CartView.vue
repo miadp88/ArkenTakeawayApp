@@ -66,8 +66,6 @@ const totalAmount = computed(() => {
 });
 
 const checkout = () => {
-  // Perform checkout logic, e.g., navigate to a checkout page
-  // You can also trigger a success notification here if needed
 };
 
 const increment = (item) => {
@@ -76,7 +74,6 @@ const increment = (item) => {
 
 const decrement = (item) => {
   if (item.quantity === 1) {
-    // If there is only one left, show confirmation
     confirmRemoveItem(item);
   } else {
     cartStore.decrementQuantity(item.id);

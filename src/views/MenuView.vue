@@ -6,17 +6,14 @@
       <section class="CardSection">
         <h1 class="mt-20 text-5xl font-extrabold tracking-tight text-center leading-none text-white md:text-5xl lg:text-6xl dark:text-white tracking-wider">
         Vælg Sæson Menu</h1>
-        <!-- Use flex and flex-wrap classes for responsiveness -->
         <div class="CardWrapper flex flex-wrap mt-10 justify-center min-h-fit px-6">
           <Card v-for="menu in getMenu()" :key="menu.id" :menu="menu" :imagePath="menu.image" />
           <a href="" class="scroll-down-link scroll-down-arrow" data-iconfont="ETmodules" data-icon></a>
         </div>
         
-        <!-- Modified Next button with right-pointing arrow SVG -->
         <div class="btnNext m-20 flex items-center justify-center">
           <router-link to="/menuAddView" class="p-4 bg-transparent text-center text-white rounded-full hover:text-btnBlue flex items-center">
             <span>Next</span>
-            <!-- Add an SVG icon to the right -->
             <span class="ml-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>

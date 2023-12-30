@@ -1,4 +1,4 @@
-<!-- src/components/Layout/Notification.vue -->
+
 <template>
   <div v-if="show" class="notification">
     <svg
@@ -33,13 +33,13 @@ export default {
       show.value = false;
     };
 
-    // Watch for changes in the message and show the notification
+   
     watch(props.message, (newValue, oldValue) => {
       if (newValue !== oldValue) {
         show.value = true;
         setTimeout(() => {
           show.value = false;
-        }, 3000); // Adjust the timeout as needed
+        }, 3000); 
       }
     });
 
@@ -57,8 +57,8 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(122, 228, 245, 0.98); /* Adjust opacity */
-  padding: 30px; /* Adjust padding to increase size */
+  background-color: rgba(122, 228, 245, 0.98); 
+  padding: 30px;
   border-radius: 10px;
   display: flex;
   align-items: center;
