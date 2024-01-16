@@ -7,7 +7,6 @@
     <div class="content-wrapper">
       <main>
         <HeroWelcome />
-        
       </main>
 
       <router-view />
@@ -34,14 +33,14 @@ import HeroWelcome from '@/components/Layout/HeroWelcomeComponent.vue'
 }
 
 header {
-  z-index: 1; 
+  z-index: 1;
 }
 
 .content-wrapper {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  margin-top: -10px; 
+  margin-top: -10px;
 }
 
 main {
@@ -50,6 +49,6 @@ main {
 }
 
 .FooterWelcome {
-  margin-top: -19vh; 
+  margin-top: -19vh;
 }
 </style>

@@ -1,12 +1,7 @@
 <template>
   <nav class="flex items-center justify-between p-3 px-6 bg-NavColor">
     <div class="w-8 h-8 text-transparent" @click="goBack">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -42,34 +37,33 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default {
   setup() {
-    const router = useRouter();
-    const menuOpen = ref(false);
+    const router = useRouter()
+    const menuOpen = ref(false)
 
     const goBack = () => {
-      router.go(-1);
-    };
+      router.go(-1)
+    }
 
     const toggleMenu = () => {
-      menuOpen.value = !menuOpen.value;
-    };
+      menuOpen.value = !menuOpen.value
+    }
 
     return {
       goBack,
       menuOpen,
-      toggleMenu,
-    };
-  },
-};
+      toggleMenu
+    }
+  }
+}
 </script>
 
-
 <style>
-  .NavBar{
-    height: 11.5vh;
-  }
+.NavBar {
+  height: 11.5vh;
+}
 </style>

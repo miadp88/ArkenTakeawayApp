@@ -1,14 +1,8 @@
-NavBarComponent.vue(path: C:\Users\miadp\Desktop\ArkenFoodDevApp\ArkenTakeawayApp\src\components\Layout\NavBarComponent.vue):
 
 <template>
   <nav class="flex items-center justify-between p-3 px-6 bg-NavColor">
     <div class="w-8 h-8 cursor-pointer text-white" @click="goBack">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -39,7 +33,9 @@ NavBarComponent.vue(path: C:\Users\miadp\Desktop\ArkenFoodDevApp\ArkenTakeawayAp
       </svg>
 
       <div class="absolute top-0 right-0 -mt-1 -mr-1">
-        <div class="bg-red-500 text-white rounded-full w-4 h-4 text-xs flex items-center justify-center">
+        <div
+          class="bg-red-500 text-white rounded-full w-4 h-4 text-xs flex items-center justify-center"
+        >
           {{ cartCount }}
         </div>
       </div>
@@ -48,28 +44,26 @@ NavBarComponent.vue(path: C:\Users\miadp\Desktop\ArkenFoodDevApp\ArkenTakeawayAp
 </template>
 
 <script>
-import { ref, computed } from 'vue';
-import { useCartStore } from '../../stores/index';
-import { useRouter } from 'vue-router';
+import { ref, computed } from 'vue'
+import { useCartStore } from '../../stores/index'
+import { useRouter } from 'vue-router'
 
 export default {
   setup() {
-    const cartCount = computed(() => useCartStore().getMenuCount());
-    const router = useRouter();
+    const cartCount = computed(() => useCartStore().getMenuCount())
+    const router = useRouter()
 
-    const showCart = () => {
-    
-    };
+    const showCart = () => {}
 
     const goBack = () => {
-      router.back(); 
-    };
+      router.back()
+    }
 
     return {
       cartCount,
       showCart,
-      goBack,
-    };
-  },
-};
+      goBack
+    }
+  }
+}
 </script>

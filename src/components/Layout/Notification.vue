@@ -1,4 +1,3 @@
-
 <template>
   <div v-if="show" class="notification">
     <svg
@@ -20,35 +19,34 @@
 </template>
 
 <script>
-import { ref, watch } from 'vue';
+import { ref, watch } from 'vue'
 
 export default {
   props: {
-    message: String,
+    message: String
   },
   setup(props) {
-    const show = ref(true);
+    const show = ref(true)
 
     const closeNotification = () => {
-      show.value = false;
-    };
+      show.value = false
+    }
 
-   
     watch(props.message, (newValue, oldValue) => {
       if (newValue !== oldValue) {
-        show.value = true;
+        show.value = true
         setTimeout(() => {
-          show.value = false;
-        }, 3000); 
+          show.value = false
+        }, 3000)
       }
-    });
+    })
 
     return {
       show,
-      closeNotification,
-    };
-  },
-};
+      closeNotification
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -57,7 +55,7 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(122, 228, 245, 0.98); 
+  background-color: rgba(122, 228, 245, 0.98);
   padding: 30px;
   border-radius: 10px;
   display: flex;
@@ -68,7 +66,7 @@ export default {
 .checkmark-icon {
   width: 24px;
   height: 24px;
-  color: #4CAF50;
+  color: #4caf50;
 }
 
 .notification p {

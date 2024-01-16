@@ -1,4 +1,3 @@
 <template>
-    <div class="stats">
-    </div>
+  <div class="stats"></div>
 </template>

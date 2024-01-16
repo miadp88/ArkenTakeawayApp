@@ -9,21 +9,47 @@
 
       <!-- Section for Side Order Cards -->
       <section>
-        <h1 class="mt-20 text-5xl font-extrabold tracking-tight text-center leading-none text-white md:text-5xl lg:text-6xl dark:text-white tracking-wider">
+        <h1
+          class="mt-20 text-5xl font-extrabold tracking-tight text-center leading-none text-white md:text-5xl lg:text-6xl dark:text-white tracking-wider"
+        >
           Vælg Side Orders
         </h1>
         <div class="CardWrapper flex flex-wrap mt-10 justify-center min-h-fit px-6">
           <!-- Use Card component for side orders -->
-          <Card v-for="sideOrder in getSideOrders()" :key="sideOrder.id" :menu="sideOrder" :imagePath="sideOrder.image" />
-          <a href="" class="scroll-down-link scroll-down-arrow" data-iconfont="ETmodules" data-icon></a>
+          <Card
+            v-for="sideOrder in getSideOrders()"
+            :key="sideOrder.id"
+            :menu="sideOrder"
+            :imagePath="sideOrder.image"
+          />
+          <a
+            href=""
+            class="scroll-down-link scroll-down-arrow"
+            data-iconfont="ETmodules"
+            data-icon
+          ></a>
         </div>
         <div class="btnNext m-20 flex items-center justify-center">
-          <router-link to="/userInfoView" class="p-4 bg-transparent text-center text-white rounded-full hover:text-btnBlue flex items-center">
+          <router-link
+            to="/userInfoView"
+            class="p-4 bg-transparent text-center text-white rounded-full hover:text-btnBlue flex items-center"
+          >
             <span>Next</span>
             <!-- Add an SVG icon to the right -->
             <span class="ml-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="h-5 w-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </span>
           </router-link>
@@ -36,44 +62,42 @@
 </template>
 
 <script setup>
-import HeroAll from "@/components/Layout/HeroAllComponent.vue";
-import Card from "@/components/Layout/CardComponent.vue";
-import NavBarOrder from "@/components/Layout/NavBarOrderComponent.vue";
-import { ref } from "vue";
+import HeroAll from '@/components/Layout/HeroAllComponent.vue'
+import Card from '@/components/Layout/CardComponent.vue'
+import NavBarOrder from '@/components/Layout/NavBarOrderComponent.vue'
+import { ref } from 'vue'
 
 const sideOrders = ref([
   {
     id: 1,
-    name: "Side Order 1",
+    name: 'Side Order 1',
     price: 50,
-    image: "../../src/assets/images/Menu6.jpg",
+    image: '../../src/assets/images/Menu6.jpg'
   },
 
   {
     id: 2,
-    name: "Side Order 2",
+    name: 'Side Order 2',
     price: 50,
-    image: "../../src/assets/images/Menu5.jpg",
-  }, 
+    image: '../../src/assets/images/Menu5.jpg'
+  },
   {
     id: 3,
-    name: "Side Order 3",
+    name: 'Side Order 3',
     price: 50,
-    image: "../../src/assets/images/Menu1.jpeg",
+    image: '../../src/assets/images/Menu1.jpeg'
   },
   {
     id: 4,
-    name: "Side Order 4",
+    name: 'Side Order 4',
     price: 50,
-    image: "../../src/assets/images/Menu2.jpeg",
-  },
-  
-
-]);
+    image: '../../src/assets/images/Menu2.jpeg'
+  }
+])
 
 const getSideOrders = () => {
-  return sideOrders.value.map(sideOrder => ({ ...sideOrder }));
-};
+  return sideOrders.value.map((sideOrder) => ({ ...sideOrder }))
+}
 </script>
 
 <style scoped>

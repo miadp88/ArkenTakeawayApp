@@ -6,11 +6,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const selectedDate = ref('');
-
-
+const selectedDate = ref('')
 </script>
 
 <style scoped>

@@ -5,9 +5,7 @@
     <NavBarOrder />
     <main class="main-content-cart m-auto">
       <section class="cart-section">
-        <h1 class="text-5xl font-extrabold text-center mb-8 text-white">
-          Indkøbskurv
-        </h1>
+        <h1 class="text-5xl font-extrabold text-center mb-8 text-white">Indkøbskurv</h1>
         <div v-if="cartItems.length === 0" class="text-white text-center">
           Du har intet i indkøbskurven
         </div>
@@ -16,7 +14,10 @@
           <div v-for="item in cartItems" :key="item.id" class="cart-item-card text-white mb-4">
             <div class="flex items-center relative">
               <!-- Menu image on the left -->
-              <div class="w-20 h-20 bg-cover bg-no-repeat rounded-lg" :style="{ backgroundImage: 'url(' + item.image + ')' }"></div>
+              <div
+                class="w-20 h-20 bg-cover bg-no-repeat rounded-lg"
+                :style="{ backgroundImage: 'url(' + item.image + ')' }"
+              ></div>
 
               <!-- Menu name, price, and counter -->
               <div class="flex flex-col ml-4">
@@ -44,9 +45,7 @@
 
           <!-- Checkout button -->
           <div class="mt-8 flex hover">
-            <button @click="checkout" class="btnCheckout">
-              Bestil
-            </button>
+            <button @click="checkout" class="btnCheckout">Bestil</button>
           </div>
         </div>
       </section>
@@ -55,38 +54,37 @@
 </template>
 
 <script setup>
-import NavBarOrder from "@/components/Layout/NavBarOrderComponent.vue";
-import { useCartStore } from "@/stores/index";
-import { ref, computed } from "vue";
+import NavBarOrder from '@/components/Layout/NavBarOrderComponent.vue'
+import { useCartStore } from '@/stores/index'
+import { ref, computed } from 'vue'
 
-const cartStore = useCartStore();
-const cartItems = computed(() => cartStore.selectedMenus);
+const cartStore = useCartStore()
+const cartItems = computed(() => cartStore.selectedMenus)
 const totalAmount = computed(() => {
-  return cartItems.value.reduce((total, item) => total + item.price * item.quantity, 0);
-});
+  return cartItems.value.reduce((total, item) => total + item.price * item.quantity, 0)
+})
 
-const checkout = () => {
-};
+const checkout = () => {}
 
 const increment = (item) => {
-  cartStore.incrementQuantity(item.id);
-};
+  cartStore.incrementQuantity(item.id)
+}
 
 const decrement = (item) => {
   if (item.quantity === 1) {
-    confirmRemoveItem(item);
+    confirmRemoveItem(item)
   } else {
-    cartStore.decrementQuantity(item.id);
+    cartStore.decrementQuantity(item.id)
   }
-};
+}
 
 const confirmRemoveItem = (item) => {
-  const isConfirmed = window.confirm("Are you sure you want to delete this card?");
+  const isConfirmed = window.confirm('Are you sure you want to delete this card?')
 
   if (isConfirmed) {
-    cartStore.removeItem(item.id);
+    cartStore.removeItem(item.id)
   }
-};
+}
 </script>
 
 <style scoped>

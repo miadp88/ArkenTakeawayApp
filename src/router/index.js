@@ -6,8 +6,8 @@ import UserInfoView from '../Views/UserInfoView.vue'
 import CartView from '../views/CartView.vue'
 import DoneOrderView from '../Views/DoneOrderView.vue'
 import StatsView from '../Views/StatsView.vue'
-import LoginView from '../Views/LoginView.vue'; 
-import OrderView from '../Views/OrderView.vue'; 
+import LoginView from '../Views/LoginView.vue'
+import OrderView from '../Views/OrderView.vue'
 
 const routes = [
   {
@@ -41,7 +41,7 @@ const routes = [
     component: StatsView
   },
   {
-    path: '/LoginView', 
+    path: '/LoginView',
     name: 'login',
     component: LoginView
   },
@@ -53,9 +53,8 @@ const routes = [
   {
     path: '/orderView',
     name: 'orderView',
-    component: OrderView,
-  },
-  
+    component: OrderView
+  }
 ]
 
 const router = createRouter({

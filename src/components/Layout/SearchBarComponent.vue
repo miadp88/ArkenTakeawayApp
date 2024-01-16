@@ -13,10 +13,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const searchValue = ref('');
-
+const searchValue = ref('')
 </script>
 
 <style scoped>
@@ -26,7 +25,7 @@ const searchValue = ref('');
 }
 
 .search-text {
-  margin-right: 8px; 
+  margin-right: 8px;
 }
 
 .search-input {
